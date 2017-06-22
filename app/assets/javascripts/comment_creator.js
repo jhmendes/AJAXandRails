@@ -28,6 +28,9 @@ var newCommentCreator = function(commentAttributes, divId) {
     append: function() {
       $(divId).append("<h3>" + commentAttributes.title + "</h3>");
       $(divId).append("<p>" + commentAttributes.content + "</p>");
+      var form = $('#new_comment');
+      form.reset();
     }
+
   };
 };
