@@ -29,6 +29,8 @@ describe("CommentCreator", function() {
       var request = jasmine.Ajax.requests.mostRecent();
       expect(request.method).toBe("POST");
       expect(request.url).toBe("/api/v1/comments");
+      expect(request.data).toBeDefined();
+      console.log(request);
     });
 
     it("notifies the user after posting the data", function() {

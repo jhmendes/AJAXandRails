@@ -26,10 +26,10 @@ var newCommentCreator = function(commentAttributes, divId) {
       $("body").prepend(flash);
     },
     append: function() {
+      console.log(this.comment);
       $(divId).append("<h3>" + commentAttributes.title + "</h3>");
       $(divId).append("<p>" + commentAttributes.content + "</p>");
-      var form = $('#new_comment');
-      form.reset();
+  
     }
 
   };
